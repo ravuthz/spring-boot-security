@@ -24,7 +24,65 @@
 | GET | /api/test/admin | Access Admin's content |
 
 ### Project Structure
-Project Tree Picture here ...
+```bash
+.
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── tutorial
+│   │   │           └── security
+│   │   │               ├── auth
+│   │   │               │   ├── jwt
+│   │   │               │   │   ├── AuthEntryPointJwt.java
+│   │   │               │   │   ├── AuthTokenFilter.java
+│   │   │               │   │   └── JwtUtils.java
+│   │   │               │   └── WebSecurityConfig.java
+│   │   │               ├── controllers
+│   │   │               │   ├── AuthController.java
+│   │   │               │   ├── TestController.java
+│   │   │               │   └── UserController.java
+│   │   │               ├── models
+│   │   │               │   ├── Role.java
+│   │   │               │   └── User.java
+│   │   │               ├── payloads
+│   │   │               │   ├── request
+│   │   │               │   │   ├── LoginRequest.java
+│   │   │               │   │   └── SignupRequest.java
+│   │   │               │   └── response
+│   │   │               │       ├── JwtResponse.java
+│   │   │               │       └── MessageResponse.java
+│   │   │               ├── repositories
+│   │   │               │   ├── RoleRepository.java
+│   │   │               │   └── UserRepository.java
+│   │   │               ├── services
+│   │   │               │   ├── UserDetailsImpl.java
+│   │   │               │   ├── UserDetailsService.java
+│   │   │               │   ├── UserDetailsServiceImpl.java
+│   │   │               │   ├── UserRoleService.java
+│   │   │               │   └── UserRoleServiceImpl.java
+│   │   │               ├── SecurityApplication.java
+│   │   │               └── SecurityApplicationCLI.java
+│   │   └── resources
+│   │       ├── static
+│   │       ├── templates
+│   │       └── application.properties
+│   └── test
+│       └── java
+│           └── com
+│               └── tutorial
+│                   └── security
+│                       └── SecurityApplicationTests.java
+├── .gitignore
+├── HELP.md
+├── README.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── security.iml
+
+24 directories, 31 files
+```
 
 
 ### Spring Boot Authentication Flow
