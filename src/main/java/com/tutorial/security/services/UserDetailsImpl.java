@@ -2,7 +2,6 @@ package com.tutorial.security.services;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.tutorial.security.models.User;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

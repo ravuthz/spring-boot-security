@@ -2,8 +2,6 @@ package com.tutorial.security.controllers;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,11 +19,9 @@ public class TestController {
     }
 
     @GetMapping("/user")
-    @PreAuthorize("hasAnyRole('USER', 'ROLE_USER', 'EDITOR', 'VISITOR', 'ADMIN')")
-//    @PreAuthorize("hasAnyAuthority('USER', 'EDITOR', 'VISITOR', 'ADMIN')")
+    @PreAuthorize("hasAnyAuthority('USER', 'EDITOR', 'VISITOR', 'ADMIN')")
     public String userAccess(Principal principal, Authentication authentication) {
 //        SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
         System.out.println(principal);
         System.out.println(authentication);
         return "User Content.";
@@ -49,13 +45,4 @@ public class TestController {
         return "Admin Board.";
     }
 
-    @GetMapping("/only-user")
-    public String onlyUser() {
-        return "User Only";
-    }
-
-    @GetMapping("/only-admin")
-    public String onlyAdmin() {
-        return "Admin Only";
-    }
 }

@@ -22,7 +22,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity(
-        securedEnabled = false,
+        securedEnabled = true,
         jsr250Enabled = true,
         prePostEnabled = true
 )
@@ -49,7 +49,7 @@ public class WebSecurityConfig {
 
     @Bean
     public GrantedAuthorityDefaults grantedAuthorityDefaults() {
-        return new GrantedAuthorityDefaults("ROLE_"); // Remove the ROLE_ prefix
+        return new GrantedAuthorityDefaults("ROLE_");
     }
 
     @Bean
@@ -72,10 +72,6 @@ public class WebSecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
                         auth
-//                                TOOD: Does't work with /api/test/only-user and /api/test/only-admin yet
-                                .requestMatchers("/api/test/only-user").hasAuthority("USER")
-                                .requestMatchers("/api/test/only-admin").hasAuthority("ADMIN")
-
                                 .requestMatchers("/api/auth/**").permitAll()
                                 .requestMatchers("/api/test/**").permitAll()
                                 .anyRequest().authenticated()
