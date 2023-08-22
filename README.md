@@ -156,7 +156,7 @@ Use [Spring Initilizer](https://start.spring.io) or IDE ([Spring Tools Suite](ht
 
 #### Configure Spring Datasource, JPA, App properties
 
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/resources/application.properties#L1-L13
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/resources/application.properties#L1-L16
 
 ```bash=
 # application.properties
@@ -173,84 +173,84 @@ spring.jpa.show-sql=false
 #### Create the models
 
 User.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/models/User.java#L1-L53
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/models/User.java#L1-L53
 
 Role.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/models/Role.java#L1-L25
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/models/Role.java#L1-L25
 
 #### Create the reposiotories
 
 UserRepository.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/repositories/UserRepository.java#L1-L14
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/repositories/UserRepository.java#L1-L14
 
 RoleRepository.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/repositories/RoleRepository.java#L1-L12
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/repositories/RoleRepository.java#L1-L12
 
 #### Configure Spring Security
 
 WebSecurityConfig.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/auth/WebSecurityConfig.java#L1-L90
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/auth/WebSecurityConfig.java#L1-L90
 
 #### Implement UserDetails & UserDetailsService
 
 UserDetailsImpl.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/services/UserDetailsImpl.java#L1-L93
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/services/UserDetailsImpl.java#L1-L93
 
 UserDetailsService.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/services/UserDetailsService.java#L1-L8
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/services/UserDetailsService.java#L1-L8
 
 UserDetailsServiceImpl.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/services/UserDetailsServiceImpl.java#L1-L24
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/services/UserDetailsServiceImpl.java#L1-L24
 
 #### Implement User and Role Service
 
 UserRoleService.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/services/UserRoleService.java#L1-L13
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/services/UserRoleService.java#L1-L13
 
 UserRoleServiceImpl.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/services/UserRoleServiceImpl.java#L1-L41
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/services/UserRoleServiceImpl.java#L1-L41
 
 #### Implement the Filter Requests
 
 AuthTokenFilter.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/auth/jwt/AuthTokenFilter.java#L1-L57
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/auth/jwt/AuthTokenFilter.java#L1-L57
 
 #### Create JWT Utility class
 
 JwtUtils.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/auth/jwt/JwtUtils.java#L1-L61
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/auth/jwt/JwtUtils.java#L1-L61
 
 #### Implement the Authentication Exception
 
 AuthEntryPointJwt.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/auth/jwt/AuthEntryPointJwt.java#L1-L38
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/auth/jwt/AuthEntryPointJwt.java#L1-L38
 
 #### Define payloads for Spring RestController
 
 LoginRequest.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/payloads/request/LoginRequest.java#L1-L13
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/payloads/request/LoginRequest.java#L1-L13
 
 SignupRequest.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/payloads/request/SignupRequest.java#L1-L26
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/payloads/request/SignupRequest.java#L1-L26
 
 JwtResponse.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/payloads/response/JwtResponse.java#L5
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/payloads/response/JwtResponse.java#L5
 
 MessageResponse.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/payloads/response/MessageResponse.java#L1-L10
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/payloads/response/MessageResponse.java#L1-L10
 
 #### Create Spring Rest API Controllers
 
 AuthController.java - Controller for Authentication
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/controllers/AuthController.java#L1-L100
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/controllers/AuthController.java#L1-L100
 
 TestController.java- Controller for testing Authorization
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/controllers/TestController.java#L1-L61
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/controllers/TestController.java#L1-L61
 
 #### Create CLI applicaion for generate some testing data
 
 SecurityApplicationCLI.java
-https://github.com/ravuthz/spring-boot-security/blob/3d7ee365a0afad5cc5067b20a04be2b3c06707a5/src/main/java/com/tutorial/security/SecurityApplicationCLI.java#L1-L79
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/SecurityApplicationCLI.java#L1-L79
 
 
 ### Running appliation via CLI
