@@ -247,12 +247,12 @@ https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f
 #### Configure Spring Security
 
 WebSecurityConfig.java
-https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/auth/WebSecurityConfig.java#L1-L90
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/auth/WebSecurityConfig.java#L1-L86
 
 #### Implement UserDetails & UserDetailsService
 
 UserDetailsImpl.java
-https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/services/UserDetailsImpl.java#L1-L93
+https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/services/UserDetailsImpl.java#L1-L92
 
 UserDetailsService.java
 https://github.com/ravuthz/spring-boot-security/blob/fadef77ac5e1144f981e0c1e77f0537a51d416b8/src/main/java/com/tutorial/security/services/UserDetailsService.java#L1-L8
